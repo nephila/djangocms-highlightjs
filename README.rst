@@ -46,3 +46,8 @@ Features
 
 
 .. _highlight.js: http://highlightjs.org/
+
+
+.. image:: https://d2weczhvl823v0.cloudfront.net/nephila/djangocms-highlightjs/trend.png
+   :alt: Bitdeli badge
+   :target: https://bitdeli.com/free
