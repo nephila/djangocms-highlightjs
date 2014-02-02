@@ -11,9 +11,14 @@ from cms.views import details
 from django.contrib.auth.models import AnonymousUser
 
 from . import BaseTest
+from djangocms_highlightjs.models import HighlightText
 
 
 class TestHighlightjsModels(BaseTest):
+    example_text = """
+    def print_hello():
+        print("hello world!")
+    """
 
     def setUp(self):
         pass
@@ -23,7 +28,7 @@ class TestHighlightjsModels(BaseTest):
         page_1, page_2 = self.get_pages()
         data = {
             'filename': 'test.py',
-            'body': 'print("Hello world!")',
+            'body': self.example_text,
             'theme': 'dark'
         }
         placeholder = page_1.placeholders.get(slot='placeholder')
@@ -39,8 +44,20 @@ class TestHighlightjsModels(BaseTest):
         response = details(request, '')
 
         self.assertContains(response, '<link rel="stylesheet" href="djangocms_highlightjs/themes/dark.css">')
-        self.assertContains(response, '<pre id="highlight-%s" class="highlight-js"><strong>test.py</strong><code>print("Hello world!")</code></pre>' % plugin.pk)
+        self.assertContains(response, '''<pre id="highlight-%s" class="highlight-js"><strong>test.py</strong><code>
+    def print_hello():
+        print("hello world!")
+    </code></pre>''' % plugin.pk)
         self.assertContains(response, '<script src="djangocms_highlightjs/js/highlight.pack.js"></script>')
+
+    def test_model_save(self):
+
+        plugin = HighlightText()
+        plugin.body = self.example_text
+        plugin.theme = "arta"
+        plugin.save()
+
+        self.assertEqual(self.example_text, plugin.body)
 
     def tearDown(self):
         pass

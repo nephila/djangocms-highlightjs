@@ -14,7 +14,7 @@ class HighlightText(CMSPlugin):
                              choices=sorted(HIGHLIGHT_THEME.items()))
 
     def save(self, no_signals=False, *args, **kwargs):
-        self.body = self.body.replace("\r", "").strip()
+        self.body = self.body.replace("\r", "")
         super(HighlightText, self).save(no_signals, *args, **kwargs)
 
     class Meta:
