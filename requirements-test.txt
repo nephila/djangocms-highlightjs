@@ -4,6 +4,6 @@ mock>=1.0.1
 nose>=1.3.0
 django-nose>=1.2
 django-sekizai
-https://github.com/divio/django-cms/archive/develop.zip
+django-cms>=3.0
 
 # Additional test requirements go here

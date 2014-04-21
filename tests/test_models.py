@@ -42,12 +42,12 @@ class TestHighlightjsModels(BaseTest):
 
         request = self.get_page_request(public, AnonymousUser())
         response = details(request, '')
-
         self.assertContains(response, '<link rel="stylesheet" href="djangocms_highlightjs/themes/dark.css">')
-        self.assertContains(response, '''<pre id="highlight-%s" class="highlight-js"><strong>test.py</strong><code>
+        self.assertContains(response, '''<pre id="highlight-%s" class="highlight-js">\n\t<strong>test.py</strong>\n\t<code>
     def print_hello():
         print("hello world!")
-    </code></pre>''' % plugin.pk)
+    </code>
+</pre>''' % plugin.pk)
         self.assertContains(response, '<script src="djangocms_highlightjs/js/highlight.pack.js"></script>')
 
     def test_model_save(self):
