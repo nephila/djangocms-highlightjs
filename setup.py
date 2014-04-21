@@ -37,6 +37,7 @@ setup(
     include_package_data=True,
     install_requires=[
         'django-sekizai',
+        'django-cms>=3.0',
     ],
     license="BSD",
     zip_safe=False,
