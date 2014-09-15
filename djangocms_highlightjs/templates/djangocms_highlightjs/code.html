@@ -4,12 +4,12 @@
 {% endaddtoblock %}
 
 {% addtoblock "js" %}
-	<script src="{% static highlight %}"></script>
-	<script>
-		$(document).ready(function() {
-			$('pre#highlight-{{ instance.pk }} code').each(function(i, e) {hljs.highlightBlock(e)});
-		});
-	</script>
+<script src="{% static highlight %}"></script>
+<script>
+    $(document).ready(function() {
+        $('pre#highlight-{{ instance.pk }} code').each(function(i, e) {hljs.highlightBlock(e)});
+    });
+</script>
 {% endaddtoblock %}
 <pre id="highlight-{{ instance.pk }}" class="highlight-js">
 	{% if instance.filename %}<strong>{{ instance.filename }}</strong>{% endif %}
