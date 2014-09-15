@@ -23,19 +23,19 @@ clean-pyc:
 	find . -name '*~' -exec rm -f {} +
 
 lint:
-	flake8 djangocms_page_meta tests
+	flake8 djangocms_highlightjs
+	djangocms-helper djangocms_highlightjs pyflakes --cms
 
 test:
-	python runtests.py test
+	djangocms-helper djangocms_highlightjs test --cms --nose
 
 test-all:
 	tox
 
 coverage:
-	coverage run --source djangocms-page-meta setup.py test
+	coverage erase
+	coverage run `which djangocms-helper` djangocms_highlightjs test --cms --nose
 	coverage report -m
-	coverage html
-	open htmlcov/index.html
 
 release: clean
 	python setup.py sdist upload

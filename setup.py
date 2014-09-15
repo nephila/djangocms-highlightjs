@@ -36,6 +36,7 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
+        'django<1.7',
         'django-sekizai',
         'django-cms>=3.0',
     ],

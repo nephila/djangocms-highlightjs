@@ -3,6 +3,11 @@
 History
 -------
 
+0.3.0 (unreleased)
+++++++++++++++++++
+
+* Add icon when plugin is used in text plugin.
+
 0.2.0 (2014-04-21)
 ++++++++++++++++++
 
