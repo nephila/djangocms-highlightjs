@@ -3,10 +3,13 @@
 History
 -------
 
-0.3.0 (unreleased)
+0.3.0 (2014-09-15)
 ++++++++++++++++++
 
 * Add icon when plugin is used in text plugin.
+* Switch to djangocms-helper for tests.
+* Officially supports python 3.
+
 
 0.2.0 (2014-04-21)
 ++++++++++++++++++
