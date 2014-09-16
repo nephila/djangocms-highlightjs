@@ -46,7 +46,7 @@ class TestHighlightjsModels(BaseTest):
         self.assertContains(response, '<link rel="stylesheet" href="/static/djangocms_highlightjs/themes/dark.css">')
         self.assertContains(response, '''<pre id="highlight-%s" class="highlight-js">\n\t<strong>test.py</strong>\n\t<code>
     def print_hello():
-        print("hello world!")
+        print(&quot;hello world!&quot;)
     </code>
 </pre>''' % plugin.pk)
         self.assertContains(response, '<script src="/static/djangocms_highlightjs/js/highlight.pack.js"></script>')
