@@ -13,5 +13,5 @@
 {% endaddtoblock %}
 <pre id="highlight-{{ instance.pk }}" class="highlight-js">
 	{% if instance.filename %}<strong>{{ instance.filename }}</strong>{% endif %}
-	<code>{{ instance.body|safe }}</code>
+	<code>{{ instance.body }}</code>
 </pre>
