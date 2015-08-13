@@ -3,37 +3,37 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# yakky <i.spalletti@nephila.it>, 2014
+# David Díaz <d.diazp@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: djangocms-highlightjs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-26 19:44+0100\n"
-"PO-Revision-Date: 2015-01-24 22:34+0000\n"
-"Last-Translator: yakky <i.spalletti@nephila.it>\n"
-"Language-Team: Italian (http://www.transifex.com/nephila/djangocms-highlightjs/language/it/)\n"
+"PO-Revision-Date: 2015-04-28 12:30+0000\n"
+"Last-Translator: David Díaz <d.diazp@gmail.com>\n"
+"Language-Team: Spanish (http://www.transifex.com/nephila/djangocms-highlightjs/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: it\n"
+"Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: cms_plugins.py:10
 msgid "highlight.js code"
-msgstr "codice highlight.js "
+msgstr "código highlight.js"
 
 #: models.py:10
 msgid "Code"
-msgstr "Codice"
+msgstr "Código"
 
 #: models.py:11
 msgid "Filename"
-msgstr "Nome del file"
+msgstr "Nombre del archivo"
 
 #: models.py:13
 msgid "Rendering theme"
-msgstr "Tema grafico"
+msgstr "Renderizando tema"
 
 #: models.py:21 models.py:22
 msgid "Highligh.JS code"
-msgstr "Codice highlight.js "
+msgstr "código Highlight.JS"
