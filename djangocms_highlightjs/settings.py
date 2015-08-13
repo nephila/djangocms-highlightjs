@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.conf import settings
 
-
 DEFAULT_THEMES = {
     'arta': 'Arta',
     'ascetic': 'Ascetic',

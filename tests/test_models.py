@@ -9,7 +9,6 @@ Tests for `djangocms_highlightjs` modules module.
 """
 from cms.views import details
 from django.contrib.auth.models import AnonymousUser
-
 from djangocms_highlightjs.models import HighlightText
 
 from . import BaseTest
