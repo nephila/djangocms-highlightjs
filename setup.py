@@ -41,6 +41,7 @@ setup(
     license="BSD",
     zip_safe=False,
     keywords='djangocms-highlightjs',
+    test_suite='cms_helper.run',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Framework :: Django',
