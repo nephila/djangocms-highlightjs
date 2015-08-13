@@ -3,9 +3,6 @@
 Tests for `djangocms_highlightjs` module.
 """
 from cms.utils import get_language_list
-from django.http import SimpleCookie
-from django.test import TestCase, RequestFactory
-from django.utils.six import StringIO
 from djangocms_helper.base_test import BaseTestCase
 
 
