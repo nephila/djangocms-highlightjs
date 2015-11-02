@@ -17,7 +17,7 @@ from . import BaseTest
 class TestHighlightjsModels(BaseTest):
     example_text = """
     def print_hello():
-        print('hello world!')
+        print(\"hello world!\")
     """
 
     def setUp(self):
