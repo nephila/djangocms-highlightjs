@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import, print_function, unicode_literals
+
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from django.templatetags.static import static
@@ -8,9 +10,9 @@ from .models import HighlightText
 
 
 class HighlightPlugin(CMSPluginBase):
-    name = _(u"highlight.js code")
+    name = _('highlight.js code')
     model = HighlightText
-    render_template = "djangocms_highlightjs/code.html"
+    render_template = 'djangocms_highlightjs/code.html'
     text_enabled = True
     allow_children = False
     fields = ['theme', 'filename', 'body']

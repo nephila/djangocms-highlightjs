@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
-import os
-import sys
+from __future__ import absolute_import, print_function, unicode_literals
 
 import djangocms_highlightjs
 
@@ -13,12 +11,6 @@ except ImportError:
 
 version = djangocms_highlightjs.__version__
 
-if sys.argv[-1] == 'publish':
-    os.system('python setup.py sdist upload')
-    print("You probably want to also tag the version now:")
-    print("  git tag -a %s -m 'version %s'" % (version, version))
-    print("  git push --tags")
-    sys.exit()
 
 readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
@@ -26,7 +18,7 @@ history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 setup(
     name='djangocms-highlightjs',
     version=version,
-    description="""highlight.js plugin for django CMS 3.0""",
+    description='''highlight.js plugin for django CMS 3.0''',
     long_description=readme + '\n\n' + history,
     author='Iacopo Spalletti',
     author_email='i.spalletti@nephila.it',
@@ -37,8 +29,9 @@ setup(
     include_package_data=True,
     install_requires=[
         'django-cms>=3.0',
+        'ordereddict',
     ],
-    license="BSD",
+    license='BSD',
     zip_safe=False,
     keywords='djangocms-highlightjs',
     test_suite='cms_helper.run',
@@ -52,7 +45,7 @@ setup(
         'Framework :: Django :: 1.6',
         'Framework :: Django :: 1.7',
         'Framework :: Django :: 1.8',
-        "Programming Language :: Python :: 2",
+        'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
