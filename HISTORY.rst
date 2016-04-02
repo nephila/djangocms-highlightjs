@@ -3,12 +3,17 @@
 History
 -------
 
+0.5.0 (unreleased)
+++++++++++++++++++
+
+* Add support for Django 1.9
+* Add support for django CMS 3.2
+
 0.4.0 (2015-08-15)
 ++++++++++++++++++
 
 * Drop support for Django 1.4, 1.5
 * Add support for Django 1.8
-
 
 0.3.1 (2014-09-16)
 ++++++++++++++++++
