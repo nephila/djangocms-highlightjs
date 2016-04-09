@@ -2,6 +2,8 @@
 """
 Tests for `djangocms_highlightjs` module.
 """
+from __future__ import absolute_import, print_function, unicode_literals
+
 from cms.utils import get_language_list
 from djangocms_helper.base_test import BaseTestCase
 

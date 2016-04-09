@@ -1,12 +1,12 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
 """
 test_djangocms_highlightjs
 ------------
 
 Tests for `djangocms_highlightjs` modules module.
 """
+from __future__ import absolute_import, print_function, unicode_literals
+
 from cms.views import details
 from django.contrib.auth.models import AnonymousUser
 from djangocms_highlightjs.models import HighlightText
@@ -17,7 +17,7 @@ from . import BaseTest
 class TestHighlightjsModels(BaseTest):
     example_text = """
     def print_hello():
-        print("hello world!")
+        print(\"hello world!\")
     """
 
     def setUp(self):
@@ -43,18 +43,18 @@ class TestHighlightjsModels(BaseTest):
         request = self.get_page_request(public, AnonymousUser())
         response = details(request, '')
         self.assertContains(response, '<link rel="stylesheet" href="/static/djangocms_highlightjs/themes/dark.css">')
-        self.assertContains(response, '''<pre id="highlight-%s" class="highlight-js">\n\t<strong>test.py</strong>\n\t<code>
+        self.assertContains(response, """<pre id="highlight-%s" class="highlight-js">\n\t<strong>test.py</strong>\n\t<code>
     def print_hello():
         print(&quot;hello world!&quot;)
     </code>
-</pre>''' % plugin.pk)
+</pre>""" % plugin.pk)
         self.assertContains(response, '<script src="/static/djangocms_highlightjs/js/highlight.pack.js"></script>')
 
     def test_model_save(self):
 
         plugin = HighlightText()
         plugin.body = self.example_text
-        plugin.theme = "arta"
+        plugin.theme = 'arta'
         plugin.save()
 
         self.assertEqual(self.example_text, plugin.body)

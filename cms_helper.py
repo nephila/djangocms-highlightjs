@@ -1,21 +1,23 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+from __future__ import absolute_import, print_function, unicode_literals
 
-gettext = lambda s: s
 
-HELPER_SETTINGS = {
-    'NOSE_ARGS': [
+def gettext(s): return s  # NOQA
+
+
+HELPER_SETTINGS = dict(
+    NOSE_ARGS=[
         '-s',
     ],
-    'INSTALLED_APPS': [
-    ],
-    'LANGUAGE_CODE': 'en',
-    'LANGUAGES': (
+    INSTALLED_APPS=[],
+    LANGUAGE_CODE='en',
+    LANGUAGES=(
         ('en', gettext('English')),
         ('fr', gettext('French')),
         ('it', gettext('Italiano')),
     ),
-    'CMS_LANGUAGES': {
+    CMS_LANGUAGES={
         1: [
             {
                 'code': 'en',
@@ -37,12 +39,12 @@ HELPER_SETTINGS = {
             'hide_untranslated': False,
         },
     },
-}
+)
 
 
 def run():
     from djangocms_helper import runner
     runner.cms('djangocms_highlightjs')
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     run()
