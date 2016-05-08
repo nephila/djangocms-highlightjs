@@ -3,7 +3,7 @@
 History
 -------
 
-0.5.0 (unreleased)
+0.5.0 (2016-05-08)
 ++++++++++++++++++
 
 * Add support for Django 1.9
