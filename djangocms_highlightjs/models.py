@@ -6,6 +6,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 from .settings import HIGHLIGHT_THEMES
+from .settings import HIGHLIGHT_LANGUAGES
 
 
 class HighlightText(CMSPlugin):
@@ -14,6 +15,7 @@ class HighlightText(CMSPlugin):
                                 blank=True)
     theme = models.CharField(_('Rendering theme'), max_length=100,
                              choices=sorted(HIGHLIGHT_THEMES))
+    language = models.CharField(_('Language'), max_length=100, default='')
 
     def save(self, no_signals=False, *args, **kwargs):
         self.body = self.body.replace("\r", "")
