@@ -20,9 +20,6 @@ class TestHighlightjsModels(BaseTest):
         print(\"hello world!\")
     """
 
-    def setUp(self):
-        pass
-
     def test_add_plugin(self):
         from cms.api import add_plugin
         page_1, page_2 = self.get_pages()
@@ -58,6 +55,3 @@ class TestHighlightjsModels(BaseTest):
         plugin.save()
 
         self.assertEqual(self.example_text, plugin.body)
-
-    def tearDown(self):
-        pass
