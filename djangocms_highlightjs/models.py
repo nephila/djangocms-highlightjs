@@ -15,7 +15,9 @@ class HighlightText(CMSPlugin):
                                 blank=True)
     theme = models.CharField(_('Rendering theme'), max_length=100,
                              choices=sorted(HIGHLIGHT_THEMES))
-    language = models.CharField(_('Language'), max_length=100, default='')
+    code_language = models.CharField(_('Code Language'), max_length=100,
+                                     default='', blank=True,
+                                     choices=sorted(HIGHLIGHT_LANGUAGES))
 
     def save(self, no_signals=False, *args, **kwargs):
         self.body = self.body.replace("\r", "")
