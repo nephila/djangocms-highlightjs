@@ -15,7 +15,7 @@ class HighlightPlugin(CMSPluginBase):
     render_template = 'djangocms_highlightjs/code.html'
     text_enabled = True
     allow_children = False
-    fields = ['theme', 'filename', 'body']
+    fields = ['theme', 'code_language', 'filename', 'body']
 
     def render(self, context, instance, placeholder):
         context.update({
