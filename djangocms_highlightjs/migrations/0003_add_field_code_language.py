@@ -10,6 +10,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('djangocms_highlightjs', '0001_initial'),
+        ('djangocms_highlightjs', '0002_auto_20160409_1853'),
     ]
 
     operations = [
