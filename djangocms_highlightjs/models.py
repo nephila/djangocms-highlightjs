@@ -5,8 +5,7 @@ from cms.models import CMSPlugin
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from .settings import HIGHLIGHT_THEMES
-from .settings import HIGHLIGHT_LANGUAGES
+from .settings import HIGHLIGHT_LANGUAGES, HIGHLIGHT_THEMES
 
 
 class HighlightText(CMSPlugin):
