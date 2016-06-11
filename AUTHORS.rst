@@ -10,4 +10,5 @@ Development Lead
 Contributors
 ------------
 
+* Jonny Morrill
 * Kim Thoenen

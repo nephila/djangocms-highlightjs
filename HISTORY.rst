@@ -3,6 +3,11 @@
 History
 -------
 
+0.6.0 (unreleased)
+++++++++++++++++++
+
+* Added support for setting language
+
 0.5.0 (2016-05-08)
 ++++++++++++++++++
 
