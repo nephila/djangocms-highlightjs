@@ -1,0 +1,6 @@
+{
+    "package-name": "djangocms-highlightjs",
+    "installed-apps": [
+        "djangocms_highlightjs"
+    ]
+}
