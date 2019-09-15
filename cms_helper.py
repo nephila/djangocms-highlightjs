@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, print_function, unicode_literals
 
+import sys
+
 
 def gettext(s): return s  # NOQA
 
@@ -43,8 +45,17 @@ HELPER_SETTINGS = dict(
 
 
 def run():
-    from djangocms_helper import runner
+    from app_helper import runner
     runner.cms('djangocms_highlightjs')
+
+
+def setup():
+    from app_helper import runner
+    runner.setup('djangocms_highlightjs', sys.modules[__name__], use_cms=True)
+
 
 if __name__ == '__main__':
     run()
+
+if __name__ == 'cms_helper':
+    setup()

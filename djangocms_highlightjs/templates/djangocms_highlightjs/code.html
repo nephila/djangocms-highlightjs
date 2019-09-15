@@ -6,8 +6,10 @@
 {% addtoblock "js" %}
 <script src="{% static highlight %}"></script>
 <script>
-    $(document).ready(function() {
-        $('pre#highlight-{{ instance.pk }} code').each(function(i, e) {hljs.highlightBlock(e)});
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
     });
 </script>
 {% endaddtoblock %}
