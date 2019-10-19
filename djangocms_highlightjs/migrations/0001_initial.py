@@ -9,7 +9,7 @@ from djangocms_highlightjs.settings import HIGHLIGHT_THEMES
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('cms', '__latest__'),
+        ('cms', '0020_old_tree_cleanup'),
     ]
 
     operations = [
