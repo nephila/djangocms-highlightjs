@@ -3,12 +3,12 @@ from __future__ import absolute_import, print_function, unicode_literals
 
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
-from django.templatetags.static import static
 from django.utils.translation import ugettext_lazy as _
 
 from .models import HighlightText
 
 
+@plugin_pool.register_plugin
 class HighlightPlugin(CMSPluginBase):
     name = _('highlight.js code')
     model = HighlightText
@@ -24,7 +24,3 @@ class HighlightPlugin(CMSPluginBase):
             'highlight': 'djangocms_highlightjs/js/highlight.pack.js'
         })
         return context
-
-    def icon_src(self, instance):
-        return static('djangocms_highlightjs/img/icon.png')
-plugin_pool.register_plugin(HighlightPlugin)

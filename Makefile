@@ -1,4 +1,5 @@
-.PHONY: clean-pyc clean-build docs
+.PHONY: clean-pyc clean-build docs livehtml
+PYTHON = python
 
 help:
 	@echo "clean-build - remove build artifacts"
@@ -24,23 +25,27 @@ clean-pyc:
 	find . -name '*~' -exec rm -f {} +
 
 lint:
-	flake8 djangocms_highlightjs tests
-	djangocms-helper djangocms_highlightjs pyflakes --cms
+	tox -epep8,isort
 
 test:
-	djangocms-helper djangocms_highlightjs test --cms --nose
+	python cms_helper.py djangocms_highlightjs test
 
 test-all:
 	tox
 
 coverage:
 	coverage erase
-	coverage run `which djangocms-helper` djangocms_highlightjs test --cms --nose
+	coverage run cms_helper.py djangocms_highlightjs
 	coverage report -m
 
-release: clean
-	python setup.py sdist bdist_wheel upload
 
 sdist: clean
 	python setup.py sdist
 	ls -l dist
+
+release: clean
+	python setup.py clean --all sdist bdist_wheel
+	python -mtwine upload dist/*
+
+livehtml:
+	sphinx-autobuild -b html -p5000 -H0.0.0.0 -E -j auto  -d docs/_build/doctrees --poll docs docs/_build/html

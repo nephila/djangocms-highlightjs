@@ -5,30 +5,31 @@ Features
 Supported languages
 -------------------
 
-- Apache
-- Bash
-- C#
-- C++
-- CSS
-- CoffeeScript
-- Diff
-- Django
-- HTML, XML
-- HTTP
-- Ini
-- JSON
-- Java
-- JavaScript
-- Makefile
-- Markdown
-- Nginx
-- Objective C
-- PHP
-- Perl
-- Python
-- Ruby
-- SCSS
-- SQL
+* Apache
+* Bash
+* C#
+* C++
+* CSS
+* CoffeeScript
+* Diff
+* HTML, XML
+* HTTP
+* Ini, TOML
+* JSON
+* Java
+* JavaScript
+* Makefile
+* Markdown
+* Nginx
+* Objective-C
+* PHP
+* Perl
+* Properties
+* Python
+* Ruby
+* SQL
+* Shell Session
+* YAML
 
 You can add more languages by compiling your own version of **highlight.js** at
 http://highlightjs.org/download/ and put it in a ``static/djangocms_highlight/js``

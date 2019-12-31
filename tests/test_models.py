@@ -30,6 +30,7 @@ class TestHighlightjsModels(BaseTest):
         }
         placeholder = page_1.placeholders.get(slot='content')
         add_plugin(placeholder, 'HighlightPlugin', 'en', **data)
+        page_1.set_as_homepage()
         page_1.publish('en')
 
         # Get published page
@@ -55,3 +56,22 @@ class TestHighlightjsModels(BaseTest):
         plugin.save()
 
         self.assertEqual(self.example_text, plugin.body)
+
+    def test_model_str(self):
+
+        plugin = HighlightText()
+        plugin.body = self.example_text
+        plugin.theme = 'arta'
+        plugin.save()
+
+        self.assertEqual('def print_hello():', str(plugin))
+
+    def test_model_str_filename(self):
+
+        plugin = HighlightText()
+        plugin.body = self.example_text
+        plugin.theme = 'arta'
+        plugin.filename = 'my_file.py'
+        plugin.save()
+
+        self.assertEqual(plugin.filename, str(plugin))

@@ -6,6 +6,11 @@ History
 0.6.0 (unreleased)
 ++++++++++++++++++
 
+* Add support for Django 1.11, 2.1, 2.2
+* Add support for django CMS 3.5, 3.6, 3.7
+* Update highligth.js to 9.15.10
+* Drop support for Django < 1.11
+* Drop support for django CMS < 3.5
 * Added support for setting language
 
 0.5.0 (2016-05-08)
