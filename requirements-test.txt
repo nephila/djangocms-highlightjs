@@ -6,4 +6,4 @@ flake8==3.8.2
 tox>=2.0
 wheel==0.34.2
 django-app-helper>=2.0.0a2
-sphinx-autobuild
+sphinx-autobuild==0.7.1
