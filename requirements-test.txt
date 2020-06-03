@@ -4,6 +4,6 @@ coveralls==2.0.0
 mock>=1.0.1
 flake8==3.8.2
 tox>=2.0
-wheel
+wheel==0.34.2
 django-app-helper>=2.0.0a2
 sphinx-autobuild
